@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Santri Mandiri - Katalog Produk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Toko Santri Mandiri</h1>
+            <p>Penyedia Produk Berkualitas Karya Santri Indonesia</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- TANTANGAN 4: Total Nilai Inventaris -->
+        <section class="inventory-summary">
+            <span>Total Nilai Inventaris Toko:</span>
+            <strong id="totalInventory">Rp 0</strong>
+        </section>
+
+        <!-- TANTANGAN 3: Form Tambah Produk Sederhana -->
+        <section class="add-product-section">
+            <h2>Tambah Produk Baru</h2>
+            <form id="addProductForm" class="add-product-form">
+                <input type="text" id="newNama" placeholder="Nama produk" required>
+                <select id="newKategori" required>
+                    <option value="">Pilih Kategori</option>
+                    <option value="makanan">Makanan</option>
+                    <option value="pakaian">Pakaian</option>
+                    <option value="kerajinan">Kerajinan</option>
+                </select>
+                <input type="number" id="newHarga" placeholder="Harga (Rp)" min="0" required>
+                <input type="number" id="newStok" placeholder="Stok awal" min="0" required>
+                <input type="text" id="newDeskripsi" placeholder="Deskripsi singkat produk" required>
+                <button type="submit" class="btn-add">Tambah Produk</button>
+            </form>
+        </section>
+
+        <!-- PRAKTIK 1: Panel Kontrol Pencarian & Filter -->
+        <section class="control-panel">
+            <input type="text" id="searchInput" placeholder="Cari nama produk...">
+            <select id="categoryFilter">
+                <option value="all">Semua Kategori</option>
+                <option value="makanan">Makanan</option>
+                <option value="pakaian">Pakaian</option>
+                <option value="kerajinan">Kerajinan</option>
+            </select>
+        </section>
+
+        <!-- PRAKTIK 1: Wadah Grid Katalog Produk -->
+        <section id="productContainer" class="product-grid">
+            <!-- Data produk akan di-render secara dinamis melalui JavaScript -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Toko Santri Mandiri. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

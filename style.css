@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+header {
+  background-color: #1b4332;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 0;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+/* TANTANGAN 4: Ringkasan Total Nilai Inventaris */
+.inventory-summary {
+  background-color: #d8f3dc;
+  color: #1b4332;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.05rem;
+  border-left: 5px solid #2d6a4f;
+}
+
+.inventory-summary strong {
+  font-size: 1.25rem;
+}
+
+/* TANTANGAN 3: Form Tambah Produk */
+.add-product-section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+}
+
+.add-product-section h2 {
+  color: #1b4332;
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+}
+
+.add-product-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.add-product-form input,
+.add-product-form select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.btn-add {
+  background-color: #1b4332;
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-add:hover {
+  background-color: #2d6a4f;
+}
+
+/* PRAKTIK 2: Panel Kontrol & Grid Produk */
+.control-panel {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.control-panel input,
+.control-panel select {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 0.2s;
+}
+
+/* TANTANGAN 2: Visual Stok Habis */
+.card.out-of-stock {
+  background-color: #e2e6ea;
+  color: #6c757d;
+}
+
+.card.out-of-stock h3,
+.card.out-of-stock .price {
+  color: #6c757d;
+}
+
+.out-of-stock-text {
+  display: inline-block;
+  color: #c1121f;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+.card h3 {
+  color: #2d6a4f;
+  margin-bottom: 8px;
+}
+
+.card .badge {
+  display: inline-block;
+  background: #e9ecef;
+  color: #495057;
+  padding: 3px 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+/* TANTANGAN 1: Deskripsi Produk */
+.card .description {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.card .price {
+  font-weight: bold;
+  color: #1b4332;
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.card .stock-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.btn-stock {
+  background-color: #2d6a4f;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-stock:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  background: #d8f3dc;
+  color: #1b4332;
+}
